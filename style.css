@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #D3CBC0;
+}
+
+@font-face {
+    font-family: magnetlight;
+    src: url(/MagnetTrial-ExtraLight-BF65f3b2c458ace.otf);
+}
+
+@font-face {
+    font-family: magnetregular;
+    src: url(/MagnetTrial-Regular-BF65f3b2c4d8cea.otf);
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px 8%; 
+    z-index: 100;
+    border-bottom: 0.2px solid #717767;
+    background-color: rgba(211, 203, 192, 0.5); /* Added transparency */
+    backdrop-filter: blur(10px);
+}
+
+nav p {
+    font-family: magnetlight;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    height: 100%;
+    line-height: 15px;
+}
+
+.logo p span {
+    font-weight: 800;
+    font-family: magnetregular;
+}
+
+.nav-links {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links p {
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-container {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.credit-text {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+
+.credit-text h4 {
+    font-family: magnetlight;
+    font-size: 12px;
+    color: #717767;
+}
+
+.cart-svg, .profile-svg {
+    border: 1px solid #403F3D;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 120px;
+    padding-left: 8%;
+}
+
+.overlay h1 {
+    width: 50%;
+    /* font-size: clamp(40px, 5vw, 60px); */
+    font-size: 30px;
+    font-family: magnetlight;
+    margin-bottom: 100px;
+}
+
+/* Card Section */
+.card-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.text-container {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.text-container p {
+    font-size: 26px;
+    font-family: magnetlight;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .text-container p {
+    transform: translateY(-100%);
+}
+
+.pragaraph-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    bottom: 30%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .pragaraph-container {
+    opacity: 1;
+}
+.end {
+    margin: 0;
+    background-color: red;
+    /* color: #000; */
+    position: relative;
+    bottom: 10;
+}
+.end h4{
+    color: #000;
+    height: 1px;
+    /* width: 0px; */
+    
+    transition: all ease-in 0.3s;
+}
+.card:hover .end h4{
+    width: 80%;
+}
+.para h4 {
+    font-size: 11px;
+    font-family: magnetlight;
+    color: #333;
+}
+
+/* Marquee Section */
+.marquee {
+    height: 100vh;
+    width: 100%;
+    background-color: #DED9C5;
+    position: relative;
+    overflow: hidden;
+}
+
+.marquee img {
+    height: 100%;
+    width: 100%;
+    scale: 0.5;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.marquee-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    top: 0;
+}
+
+.marquee-divs {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: red; */
+}
+.marquee-divs-bottom {
+    height: 12vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.marquee-track-top {
+    display: flex;
+    gap: 40px;
+    /* background-color: greenyellow; */
+    animation: mark 25s linear infinite;
+}
+
+.marquee-track-bottom {
+    display: flex;
+    /* background-color: greenyellow; */
+    gap: 40px;
+    animation: markb 25s linear infinite;
+}
+
+.marquee-conatiner {
+    flex-shrink: 0;
+}
+
+
+.marquee-conatiner h1 {
+    font-family: magnetlight;
+    font-size: 40px;
+}
+@keyframes mark {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); 
+    }
+}
+
+@keyframes markb {
+    0% {
+         transform: translateX(-50%); 
+    }
+    100% {
+         transform: translateX(0); 
+    }
+}
+
+
+
+/* image section */
+.image-container{
+    height: 100vh;
+    width: 100%;
+    background-color: #ddd8c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.cards{
+    height: 250px;
+    border-radius: 20px;
+    width: 250px;
+    background-color: aqua;
+    z-index: 2;
+    transition: all ease-in-out 0.5s;
+}
+.cards:hover{
+    height: 350px;
+    width: 350px;
+}
+
+.cards {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all ease 0.4s;
+    position: relative;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.text-container {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.text-container p {
+    font-size: 26px;
+    font-family: magnetlight;
+    transition: transform 0.4s ease;
+}
+
+.cards:hover .text-container p {
+    transform: translateY(-100%);
+}
+
+.pragaraph-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    bottom: 30%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cards:hover .pragaraph-container {
+    opacity: 1;
+}
+.end {
+    margin: 0;
+    background-color: red;
+    /* color: #000; */
+    position: relative;
+    bottom: 10;
+}
+.end h4{
+    color: #000;
+    height: 1px;
+    /* width: 0px; */
+    
+    transition: all ease-in 0.3s;
+}
+.card:hover .end h4{
+    width: 80%;
+}
+.para h4 {
+    font-size: 11px;
+    font-family: magnetlight;
+    color: #333;
+}
+
+
+
+
+.cards1:hover ~.img1{
+    opacity: 1;
+}
+.cards2:hover ~.img2{
+    opacity: 1;
+}
+.cards3:hover ~.img3{
+    opacity: 1;
+}
+/* 
+@media (min-width:640px) {
+    .overlay h1{
+        width: 50%;
+        font-size: 50px;
+        font-family: magnetlight;
+        margin-bottom: 100px;
+    }
+}
+@media (min-width:768px) {
+    .overlay h1{
+        width: 50%;
+        font-size: 70px;
+        font-family: magnetlight;
+        margin-bottom: 100px;
+    }
+}
+@media (min-width:1024px) {
+    .overlay h1{
+        width: 50%;
+        font-size: 80px;
+        font-family: magnetlight;
+        margin-bottom: 100px;
+    }
+}
+@media (min-width:1280px) {
+        .overlay h1{
+        width: 50%;
+        font-size: 90px;
+        font-family: magnetlight;
+        margin-bottom: 100px;
+    }
+}
+@media (min-width:1536px) {
+    .overlay h1{
+        width: 50%;
+        font-size: 200px;
+        font-family: magnetlight;
+        margin-bottom: 100px;
+    }
+} */
+
+.comitted{
+    height: 100vh;
+    width: 100%;
+    background-color: #fffdf5;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 20px;
+    position: relative;
+}
+.headline{
+    /* background-color: blue; */
+    height: calc(100%/3);
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headline h1{
+    font-family: magnetlight;
+    font-size: 50px;
+}
+.headline p{
+    font-size: 20px;
+    font-family: magnetlight;
+}
+.part1{
+    display: flex;
+    align-items: center;
+    /* background-color: turquoise; */
+    height: 100%;
+    width: 100%;
+}
+.part2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 30px;
+    /* background-color: greenyellow; */
+}
+.part2 button{
+    /* height: px; */
+    width: 90px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: magnetlight;
+    border-radius: 5px;
+}
