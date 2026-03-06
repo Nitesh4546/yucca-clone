@@ -1001,14 +1001,15 @@ main {
 
 
 
-.end-section{
+.end-section {
     /* height: 90vh; */
     width: 100%;
     background-color: #ded9c5;
     padding-left: 150px;
     padding-right: 150px;
 }
-.end-sec-top{
+
+.end-sec-top {
     padding-top: 100px;
     height: 40%;
     width: 100%;
@@ -1016,12 +1017,13 @@ main {
     justify-content: space-between;
     /* background-color: rebeccapurple; */
 }
+
 /* .end-sec-top{ */
-    /* height: 10%; */
-    /* width: 100%; */
-    /* background-color: red; */
+/* height: 10%; */
+/* width: 100%; */
+/* background-color: red; */
 /* } */
-.end-top-title{
+.end-top-title {
     /* display: flex; */
     padding-top: 20px;
     /* align-items: center; */
@@ -1031,7 +1033,8 @@ main {
     font-size: 30px;
     /* background-color: red; */
 }
-.end-top-button{
+
+.end-top-button {
     height: 100%;
     width: 40%;
     /* padding-right: ; */
@@ -1040,7 +1043,8 @@ main {
     justify-content: end;
     /* background-color: greenyellow; */
 }
-.arrow{
+
+.arrow {
     height: 50px;
     width: 50px;
     /* background-color: red; */
@@ -1051,22 +1055,23 @@ main {
     justify-content: center;
     rotate: 180deg;
 }
+
 /* .arrow p{ */
-    /* background-color: transparent; */
-    /* border-radius: 12px; */
-    /* padding: 20px; */
-    /* border: 1px solid black; */
+/* background-color: transparent; */
+/* border-radius: 12px; */
+/* padding: 20px; */
+/* border: 1px solid black; */
 /* } */
-.end-bottom{
+.end-bottom {
     height: 100%;
     width: 100%;
     /* background-color: red; */
-    padding-top: 30px; 
-    padding-bottom: 30px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
     gap: 30px;
 }
 
-.end-bottom-card-cont{
+.end-bottom-card-cont {
     height: 100%;
     width: 100%;
     display: grid;
@@ -1076,7 +1081,8 @@ main {
     justify-content: space-between;
     /* background-color: blue; */
 }
-.end-bottom-card{
+
+.end-bottom-card {
     height: 300px;
     width: 300px;
     /* background-color: greenyellow; */
@@ -1086,16 +1092,18 @@ main {
     align-items: center;
     justify-content: center;
 }
-.card_sep{
+
+.card_sep {
     border: none;
 }
-.card_sep svg{
+
+.card_sep svg {
     height: 100%;
     width: 100%;
 
 }
 
-.social{
+.social {
     margin-top: 30px;
     width: 100%;
     height: 50px;
@@ -1108,18 +1116,21 @@ main {
     padding: 10px;
     justify-content: space-between;
 }
-.social-left{
+
+.social-left {
     font-size: 20px;
     display: flex;
     align-items: center;
 
 }
-.social-right{
+
+.social-right {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.social-media{
+
+.social-media {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -1131,15 +1142,22 @@ main {
 
 
 
-.card-title-overlay1, .card-title-overlay2, .card-title-overlay3 {
+.card-title-overlay1,
+.card-title-overlay2,
+.card-title-overlay3 {
     /* background-color: #f4f4f4;*/
     position: relative;
     width: 100%;
     height: 45px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-.card-title-top1, .card-title-top2, .card-title-top3, .card-title-bottom1, .card-title-bottom2, .card-title-bottom3 {
+.card-title-top1,
+.card-title-top2,
+.card-title-top3,
+.card-title-bottom1,
+.card-title-bottom2,
+.card-title-bottom3 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1149,43 +1167,55 @@ main {
     transition: all 0.4s ease-in-out;
 }
 
-.card-title-top1, .card-title-top2, .card-title-top3 {
+.card-title-top1,
+.card-title-top2,
+.card-title-top3 {
     top: 0;
 }
 
-.card-title-bottom1, .card-title-bottom2, .card-title-bottom3 {
-    top: 100%; 
+.card-title-bottom1,
+.card-title-bottom2,
+.card-title-bottom3 {
+    top: 100%;
 }
 
 .card_sep1:hover .card-title-top1 {
-    top: -100%; 
+    top: -100%;
 }
+
 .card_sep2:hover .card-title-top2 {
-    top: -100%; 
+    top: -100%;
 }
+
 .card_sep3:hover .card-title-top3 {
-    top: -100%; 
+    top: -100%;
 }
+
 .card_sep1:hover .card-title-bottom1 {
-    top: 0; 
+    top: 0;
     color: white;
 }
+
 .card_sep2:hover .card-title-bottom2 {
-    top: 0; 
+    top: 0;
     color: white;
 }
+
 .card_sep3:hover .card-title-bottom3 {
-    top: 0; 
+    top: 0;
     color: white;
 }
+
 .card-title-overlay1 h1 {
     /* font-size: 1.2rem; */
     margin: 0;
 }
+
 .card-title-overlay2 h1 {
     /* font-size: 1.2rem; */
     margin: 0;
 }
+
 .card-title-overlay3 h1 {
     /* font-size: 1.2rem; */
     margin: 0;
@@ -1196,14 +1226,15 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 90px;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 }
+
 .card_sep2:hover {
     background: url("https://yucca.co.za/wp-content/uploads/2025/09/processing.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 90px;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 }
 
 .card_sep3:hover {
@@ -1211,5 +1242,5 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 90px;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 }
