@@ -1131,7 +1131,7 @@ main {
 
 
 
-.card-title-overlay {
+.card-title-overlay1, .card-title-overlay2, .card-title-overlay3 {
     /* background-color: #f4f4f4;*/
     position: relative;
     width: 100%;
@@ -1139,7 +1139,7 @@ main {
     overflow: hidden; 
 }
 
-.card-title-top, .card-title-bottom {
+.card-title-top1, .card-title-top2, .card-title-top3, .card-title-bottom1, .card-title-bottom2, .card-title-bottom3 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1149,28 +1149,47 @@ main {
     transition: all 0.4s ease-in-out;
 }
 
-.card-title-top {
+.card-title-top1, .card-title-top2, .card-title-top3 {
     top: 0;
 }
 
-.card-title-bottom {
+.card-title-bottom1, .card-title-bottom2, .card-title-bottom3 {
     top: 100%; 
 }
 
-.card_sep1:hover .card-title-top {
+.card_sep1:hover .card-title-top1 {
     top: -100%; 
 }
-
-.card_sep1:hover .card-title-bottom {
+.card_sep2:hover .card-title-top2 {
+    top: -100%; 
+}
+.card_sep3:hover .card-title-top3 {
+    top: -100%; 
+}
+.card_sep1:hover .card-title-bottom1 {
     top: 0; 
     color: white;
 }
-
-.card-title-overlay h1 {
+.card_sep2:hover .card-title-bottom2 {
+    top: 0; 
+    color: white;
+}
+.card_sep3:hover .card-title-bottom3 {
+    top: 0; 
+    color: white;
+}
+.card-title-overlay1 h1 {
     /* font-size: 1.2rem; */
     margin: 0;
 }
-
+.card-title-overlay2 h1 {
+    /* font-size: 1.2rem; */
+    margin: 0;
+}
+.card-title-overlay3 h1 {
+    /* font-size: 1.2rem; */
+    margin: 0;
+}
 
 .card_sep1:hover {
     background: url("https://yucca.co.za/wp-content/uploads/2025/09/service.jpg");
